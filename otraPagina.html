@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto</title>
+
+    <link rel="stylesheet" href="styleIndex.css" />
+  </head>
+
+  <body>
+    <header>
+      <div id="turnoactual"><h1 id="titulo">Camarero</h1></div>
+    </header>
+    <div class="principal">
+      <div class="pamesas">
+        <div class="cuadricula_principal">
+          <div class="contenedor_mesas">
+            <div class="mesa" id="mesa1" onclick="activarMesa(1)">1</div>
+            <div class="mesa" id="mesa2" onclick="activarMesa(2)">2</div>
+            <div class="mesa" id="mesa3" onclick="activarMesa(3)">3</div>
+            <div class="mesa" id="mesa4" onclick="activarMesa(4)">4</div>
+            <div class="mesa" id="mesa5" onclick="activarMesa(5)">5</div>
+            <div class="mesa" id="mesa6" onclick="activarMesa(6)">6</div>
+            <div class="mesa" id="mesa7" onclick="activarMesa(7)">7</div>
+            <div class="mesa" id="mesa8" onclick="activarMesa(8)">8</div>
+            <div class="mesa" id="mesa9" onclick="activarMesa(9)">9</div>
+            <div class="mesa" id="mesa10" onclick="activarMesa(10)">10</div>
+            <div class="mesa" id="mesa11" onclick="activarMesa(11)">11</div>
+            <div class="mesa" id="mesa12" onclick="activarMesa(12)">12</div>
+            <div class="mesa" id="mesa13" onclick="activarMesa(13)">13</div>
+            <div class="mesa" id="mesa14" onclick="activarMesa(14)">14</div>
+            <div class="mesa" id="mesa15" onclick="activarMesa(15)">15</div>
+            <div class="mesa" id="mesa16" onclick="activarMesa(16)">16</div>
+            <div class="mesa" id="mesa17" onclick="activarMesa(17)">17</div>
+            <div class="mesa" id="mesa18" onclick="activarMesa(18)">18</div>
+            <div class="mesa" id="mesa19" onclick="activarMesa(19)">19</div>
+            <div class="mesa" id="mesa20" onclick="activarMesa(20)">20</div>
+          </div>
+        </div>
+      </div>
+      <div class="pamenu">
+        <div class="menu">
+          <div class="bebidas">
+            <div class="bebida" onclick="comandarProducto('Coca_Cola',2.00)">
+              <figure>
+                <img src="./img/cocacola.png" alt="" />
+                <figcaption>Coca Cola</figcaption>
+              </figure>
+            </div>
+            <div class="bebida" onclick="comandarProducto('Fanta',1.80)">
+              <figure>
+                <img src="./img/fanta.png" alt="" />
+                <figcaption>Fanta</figcaption>
+              </figure>
+            </div>
+            <div class="bebida" onclick="comandarProducto('Cerveza',3.00)">
+              <figure>
+                <img src="./img/cerveza.png" alt="" />
+                <figcaption>Cerveza</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="carnes">
+            <div class="carne" onclick="comandarProducto('Chuletón',25.00)">
+              <figure>
+                <img src="./img/chuleton.png" alt="" />
+                <figcaption>Chuletón</figcaption>
+              </figure>
+            </div>
+            <div class="carne" onclick="comandarProducto('Solomillo',23.00)">
+              <figure>
+                <img src="./img/solomillo.png" alt="" />
+                <figcaption>Solomillo</figcaption>
+              </figure>
+            </div>
+            <div class="carne" onclick="comandarProducto('Cordero',18.00)">
+              <figure>
+                <img src="./img/cordero.png" alt="" />
+                <figcaption>Cordero</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="pescados">
+            <div class="pescado" onclick="comandarProducto('Lubina',16.00)">
+              <figure>
+                <img src="./img/lubina.png" alt="" />
+                <figcaption>Lubina</figcaption>
+              </figure>
+            </div>
+            <div class="pescado" onclick="comandarProducto('Boquerones',10.00)">
+              <figure>
+                <img src="./img/boquerones.png" alt="" />
+                <figcaption>Boquerones</figcaption>
+              </figure>
+            </div>
+            <div class="pescado" onclick="comandarProducto('Emperador',15.00)">
+              <figure>
+                <img src="./img/emperador.png" alt="" />
+                <figcaption>Emperador</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="postres">
+            <div class="postre" onclick="comandarProducto('Yogurt',5.00)">
+              <figure>
+                <img src="./img/yogurt.png" alt="" />
+                <figcaption>Yogurt</figcaption>
+              </figure>
+            </div>
+            <div class="postre" onclick="comandarProducto('Helado',5.00)">
+              <figure>
+                <img src="./img/helado.png" alt="" />
+                <figcaption>Helado</figcaption>
+              </figure>
+            </div>
+            <div class="postre" onclick="comandarProducto('Fruta',3.00)">
+              <figure>
+                <img src="./img/frutas.png" alt="" />
+                <figcaption>Fruta</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pacomanda">
+        <div class="comanda">
+          <h3 id="nomeac">Mesa</h3>
+          <ul id="lista_comanda"></ul>
+          <div id="capacargo"><p id="total"></p></div>
+          <div class="botones">
+            <button
+              class="boton"
+              id="btn_gua"
+              style="display: none"
+              onclick="guardarComanda()"
+            >
+              Guardar
+            </button>
+            <button
+              class="boton"
+              id="btn_mod"
+              style="display: none"
+              onclick="cargarComanda()"
+            >
+              Modificar
+            </button>
+            <button
+              class="boton"
+              id="btn_pag"
+              style="display: none"
+              onclick="pagar()"
+            >
+              Pagar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer><button id="btn_salir" onclick="salir()">Salir</button></footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

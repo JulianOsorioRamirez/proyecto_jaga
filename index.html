@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Spline+Sans+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./styleIndex.css" rel="stylesheet" />
+    <title>Proyecto</title>
+  </head>
+  <body>
+    <div id="turnoactual"><h1>RESTAURANTE JAGA</h1></div>
+
+    <div class="contenedor_login">
+      <div class="contenedorAcces">
+        <label for="nombre">Usuario: </label>
+        <input
+          type="text"
+          id="nombre"
+          placeholder="nombre de usuario"
+          required
+        />
+
+        <p id="pUser"></p>
+
+        <label for="contraseña">contraseña: </label>
+        <input
+          type="text"
+          id="contraseña"
+          placeholder="Ingrese una contraseña"
+          required
+        />
+
+        <p id="pPass"></p>
+      </div>
+
+      <div class="contenedorRegistrar">
+        <label for="nombre">Registrar un Nuevo Usuario </label>
+        <input type="text" id="newName" placeholder="Nuevo Usuario" required />
+
+        <p id="pNewUser"></p>
+
+        <label for="contraseña"> Registrar Nueva Contraseña </label>
+        <input
+          type="text"
+          id="newPassword"
+          placeholder="Nueva Contraseña"
+          required
+        />
+
+        <p id="pNewPass"></p>
+      </div>
+
+      <p id="pPass"></p>
+
+      <div class="buttons">
+        <input
+          type="button"
+          value="Enviar"
+          id="validar"
+          onclick="validar();"
+        /><br />
+        <input
+          type="button"
+          value="registrar"
+          id="registrar"
+          onclick="registrar();"
+        /><br />
+      </div>
+    </div>
+    <footer></footer>
+    <script src="./finalFronted.js"></script>
+  </body>
+</html>
